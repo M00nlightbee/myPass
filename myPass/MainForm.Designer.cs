@@ -281,7 +281,6 @@
 		private System.Windows.Forms.Label mainText;
 		private System.Windows.Forms.PictureBox getstartedBtn;
 		private System.Windows.Forms.Panel panel2;
-		private MyVault myVault2;
 		private GeneratePassword generatePassword2;
 		private CreatePassword createPassword2;
 		private MyVault myVault1;
