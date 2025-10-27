@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_07C66F8930304C4F874788BD04149A2F"
+        "MsmKey" = "8:_8177724A23B542B1A90751F48A210105"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -43,6 +43,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -59,6 +67,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -90,7 +106,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07C66F8930304C4F874788BD04149A2F"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8177724A23B542B1A90751F48A210105"
             {
             "SourcePath" = "8:..\\myPass\\myValut.ico"
             "TargetName" = "8:myValut.ico"
@@ -131,7 +147,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_6AF69CEBEB654384BCA6D6181D6D9A1C"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
@@ -142,7 +158,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_A867EF6B31814E13A0DCC51E4CF10EAB"
             {
             "Name" = "8:#1916"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:DesktopFolder"
@@ -167,7 +183,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:myPassSetup"
         "ProductCode" = "8:{259A4791-9FC1-45BF-91E1-37C35CB326B3}"
-        "PackageCode" = "8:{26F0CF42-B1B1-4371-B6C0-A756988981B0}"
+        "PackageCode" = "8:{B4D048FA-A8E6-4A6A-B233-1623AC60FDA5}"
         "UpgradeCode" = "8:{089A5CDE-FC33-43FD-9656-B918FB6843EF}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -184,7 +200,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_07C66F8930304C4F874788BD04149A2F"
+        "ARPPRODUCTICON" = "8:"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -287,7 +303,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B779268E929E474FA779293D6D50A3A6"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_95C33D8C65F44EEDB9F5E897EF060B3D"
             {
             "Name" = "8:myPass"
             "Arguments" = "8:"
@@ -295,10 +311,24 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_C526F6A0EF1A4C78ACDC945510B34BAC"
+            "Target" = "8:_A867EF6B31814E13A0DCC51E4CF10EAB"
+            "Folder" = "8:_A867EF6B31814E13A0DCC51E4CF10EAB"
+            "WorkingFolder" = "8:_A867EF6B31814E13A0DCC51E4CF10EAB"
+            "Icon" = "8:_8177724A23B542B1A90751F48A210105"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9D915E58595646A09676ECB32764C52B"
+            {
+            "Name" = "8:myPass"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_6AF69CEBEB654384BCA6D6181D6D9A1C"
             "Folder" = "8:_6AF69CEBEB654384BCA6D6181D6D9A1C"
-            "WorkingFolder" = "8:_1A16EAE011004BFEA7D0B90C15F7426D"
-            "Icon" = "8:_07C66F8930304C4F874788BD04149A2F"
+            "WorkingFolder" = "8:_6AF69CEBEB654384BCA6D6181D6D9A1C"
+            "Icon" = "8:_8177724A23B542B1A90751F48A210105"
             "Feature" = "8:"
             }
         }

@@ -39,11 +39,11 @@
 			welcomeLabel = new Label();
 			mainText = new Label();
 			panel2 = new Panel();
-			myVault2 = new MyVault();
 			generatePassword2 = new GeneratePassword();
 			createPassword2 = new CreatePassword();
 			getstartedBtn = new PictureBox();
 			shieldPicture = new PictureBox();
+			myVault1 = new MyVault();
 			navigationPanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)exitBtn).BeginInit();
 			((System.ComponentModel.ISupportInitialize)logo).BeginInit();
@@ -176,7 +176,7 @@
 			// panel2
 			// 
 			panel2.BackColor = Color.FromArgb(138, 144, 102);
-			panel2.Controls.Add(myVault2);
+			panel2.Controls.Add(myVault1);
 			panel2.Controls.Add(generatePassword2);
 			panel2.Controls.Add(createPassword2);
 			panel2.Controls.Add(getstartedBtn);
@@ -189,15 +189,6 @@
 			panel2.Name = "panel2";
 			panel2.Size = new Size(805, 651);
 			panel2.TabIndex = 0;
-			// 
-			// myVault2
-			// 
-			myVault2.BackColor = Color.FromArgb(138, 144, 102);
-			myVault2.Location = new Point(0, 0);
-			myVault2.Margin = new Padding(4, 5, 4, 5);
-			myVault2.Name = "myVault2";
-			myVault2.Size = new Size(805, 651);
-			myVault2.TabIndex = 6;
 			// 
 			// generatePassword2
 			// 
@@ -242,6 +233,15 @@
 			shieldPicture.TabIndex = 0;
 			shieldPicture.TabStop = false;
 			// 
+			// myVault1
+			// 
+			myVault1.BackColor = Color.FromArgb(138, 144, 102);
+			myVault1.Location = new Point(0, 0);
+			myVault1.Margin = new Padding(4, 5, 4, 5);
+			myVault1.Name = "myVault1";
+			myVault1.Size = new Size(805, 651);
+			myVault1.TabIndex = 1;
+			// 
 			// MainForm
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
@@ -284,5 +284,6 @@
 		private MyVault myVault2;
 		private GeneratePassword generatePassword2;
 		private CreatePassword createPassword2;
+		private MyVault myVault1;
 	}
 }

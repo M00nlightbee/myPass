@@ -25,8 +25,8 @@ namespace myPass
 				if (createPassword2 != null)
 					createPassword2.PasswordAdded += CreatePassword_PasswordAdded;
 
-				if (myVault2 != null)
-					myVault2.RequestCreatePassword += MyVault_RequestCreatePassword;
+				if (myVault1 != null)
+					myVault1.RequestCreatePassword += MyVault_RequestCreatePassword;
 
 				if (generatePassword2 != null)
 					generatePassword2.RequestCreatePassword += GeneratePassword_RequestCreatePassword;
@@ -39,7 +39,7 @@ namespace myPass
 			position(homeBtn);
 			Active(homeBtn);
 			// Hide all at startup except the home screen
-			myVault2.Hide();
+			myVault1.Hide();
 			generatePassword2.Hide();
 			createPassword2.Hide();
 		}
@@ -49,8 +49,8 @@ namespace myPass
 		private void CreatePassword_PasswordAdded(object? sender, PasswordData passwordData)
 		{
 			// Switch back to the vault and refresh
-			SetActiveUserControl(myVault2);
-			myVault2.ReloadPasswords();
+			SetActiveUserControl(myVault1);
+			myVault1.ReloadPasswords();
 			position(vaultBtn);
 			Active(vaultBtn);
 		}
@@ -99,8 +99,8 @@ namespace myPass
 		{
 			position(vaultBtn);
 			Active(vaultBtn);
-			myVault2.ReloadPasswords();
-			SetActiveUserControl(myVault2);
+			myVault1.ReloadPasswords();
+			SetActiveUserControl(myVault1);
 		}
 
 		private void getstartedBtn_Click(object sender, EventArgs e)
@@ -172,7 +172,7 @@ namespace myPass
 			// Hide all UserControl first
 			generatePassword2.Visible = false;
 			createPassword2.Visible = false;
-			myVault2.Visible = false;
+			myVault1.Visible = false;
 
 			if (activeControl != null)
 			{
