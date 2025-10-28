@@ -119,7 +119,9 @@ namespace myPass
 			if (loadAllPassword.SelectedItem != null)
 			{
 				var selectedWebsite = loadAllPassword.SelectedItem.ToString();
-				var json = File.ReadAllText("passwordData.json");
+				var filePath = GetDataFilePath.GetData();
+
+				var json = File.ReadAllText(filePath);
 				var data = JsonSerializer.Deserialize<List<PasswordData>>(json);
 				var passwordData = data?.FirstOrDefault(d => d.GetWebpageName() == selectedWebsite?.ToString());
 
@@ -154,7 +156,8 @@ namespace myPass
 					if (result == DialogResult.Yes)
 					{
 						var selectedWebsite = loadAllPassword.SelectedItem.ToString();
-						var json = File.ReadAllText("passwordData.json");
+						var filePath = GetDataFilePath.GetData();
+						var json = File.ReadAllText(filePath);
 						var data = JsonSerializer.Deserialize<List<PasswordData>>(json);
 
 						if (data != null)
@@ -166,7 +169,7 @@ namespace myPass
 
 								var options = new JsonSerializerOptions { WriteIndented = true };
 								var updatedJson = JsonSerializer.Serialize(data, options);
-								File.WriteAllText("passwordData.json", updatedJson);
+								File.WriteAllText(filePath, updatedJson);
 
 								loadAllPassword.Items.RemoveAt(loadAllPassword.SelectedIndex);
 								textBoxWebsite.Clear();
@@ -254,7 +257,7 @@ namespace myPass
 			}
 
 			var selectedWebsite = loadAllPassword.SelectedItem.ToString();
-			var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "passwordData.json");
+			var filePath = GetDataFilePath.GetData();
 
 			try
 			{
