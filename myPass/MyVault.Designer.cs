@@ -248,8 +248,8 @@
 			copyPassword.SizeMode = PictureBoxSizeMode.AutoSize;
 			copyPassword.TabIndex = 11;
 			copyPassword.TabStop = false;
-			copyPassword.Click += copyUsername_Click;
-			copyPassword.MouseLeave += copyUsername_MouseLeave;
+			copyPassword.Click += copyPassword_Click;
+			copyPassword.MouseLeave += copyPassword_MouseLeave;
 			copyPassword.MouseHover += copyPassword_MouseHover;
 			// 
 			// copyUsername

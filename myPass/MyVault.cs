@@ -38,16 +38,6 @@ namespace myPass
 			DisableTextBoxes();
 		}
 
-		//private void MyVault_Load(object sender, EventArgs e)
-		//{
-		//	if (DesignMode) return;
-		//	// Set custom draw mode for ListBox
-		//	loadAllPassword.DrawMode = DrawMode.OwnerDrawFixed;
-		//	loadAllPassword.DrawItem += loadAllPasswords_DrawItem;
-		//	filterListBox.TextChanged += filterListBox_TextChanged;
-		//	DisableTextBoxes();
-		//}
-
 		// Refresh the password list after adding a new password
 		public void ReloadPasswords()
 		{
