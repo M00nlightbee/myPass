@@ -60,7 +60,7 @@ namespace myPass
 			if (DesignMode) return; // Avoid file I/O at design time
 
 			allWebsites.Clear();
-			var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "passwordData.json");
+			var filePath = GetDataFilePath.GetData();
 
 			if (File.Exists(filePath))
 			{

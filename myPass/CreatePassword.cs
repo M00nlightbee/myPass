@@ -114,7 +114,7 @@ namespace myPass
 			var passwordData = GetPasswordData();
 			var passwordList = new List<PasswordData>();
 
-			var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "passwordData.json");
+			var filePath = GetDataFilePath.GetData();
 
 			if (File.Exists(filePath))
 			{
