@@ -138,16 +138,19 @@ namespace myPass
 			// Validate inputs only for active switches
 			int llCase = 0, ulCase = 0, scCase = 0, numCase = 0;
 
+			// Define min and max values for character counts
+			int minValue = 2, maxValue = 5;
+
 			// Populate random value in text box when toggle is on and allow for custom user input
 			if (lowerCaseSwitch.Image == toggleOn)
 			{
 				if (string.IsNullOrWhiteSpace(textBoxLowerCase.Text))
 				{
-					textBoxLowerCase.Text = r.Next(4, Math.Min(5, c.lowerCase.Length)).ToString();
+					textBoxLowerCase.Text = r.Next(4, Math.Min(maxValue, c.lowerCase.Length)).ToString();
 				}
-				if (!int.TryParse(textBoxLowerCase.Text, out llCase) || llCase <= 2 || llCase > c.lowerCase.Length)
+				if ((!int.TryParse(textBoxLowerCase.Text, out llCase)) || llCase < minValue || llCase > maxValue)
 				{
-					MessageBox.Show($"Number of LOWER CASES is INVALID.\nENTER a valid integer between 2 and {c.lowerCase.Length}");
+					MessageBox.Show($"Number of LOWER CASES is INVALID.\nENTER a valid integer between {minValue} and {maxValue}");
 					return;
 				}
 			}
@@ -156,11 +159,11 @@ namespace myPass
 			{
 				if (string.IsNullOrWhiteSpace(textBoxUpperCase.Text))
 				{
-					textBoxUpperCase.Text = r.Next(4, Math.Min(5, c.upperCase.Length) + 1).ToString();
+					textBoxUpperCase.Text = r.Next(4, Math.Min(maxValue, c.upperCase.Length) + 1).ToString();
 				}
-				if (!int.TryParse(textBoxUpperCase.Text, out ulCase) || ulCase <= 2 || ulCase > c.upperCase.Length)
+				if ((!int.TryParse(textBoxUpperCase.Text.Trim(), out ulCase)) || ulCase < minValue || ulCase > maxValue)
 				{
-					MessageBox.Show($"Number of UPPER CASES is INVALID.\nENTER a valid integer between 2 and {c.upperCase.Length}");
+					MessageBox.Show($"Number of UPPER CASES is INVALID.\nENTER a valid integer between {minValue} and {maxValue}");
 					return;
 				}
 			}
@@ -169,11 +172,11 @@ namespace myPass
 			{
 				if (string.IsNullOrWhiteSpace(textBoxSymbols.Text))
 				{
-					textBoxSymbols.Text = r.Next(4, Math.Min(5, c.symbol.Length) + 1).ToString();
+					textBoxSymbols.Text = r.Next(4, Math.Min(maxValue, c.symbol.Length) + 1).ToString();
 				}
-				if (!int.TryParse(textBoxSymbols.Text, out scCase) || scCase <= 2 || scCase > c.symbol.Length)
+				if ((!int.TryParse(textBoxSymbols.Text, out scCase)) || scCase < minValue || scCase > maxValue)
 				{
-					MessageBox.Show($"Number of SPECIAL CHARACTERS is INVALID.\nENTER a valid integer between 2 and {c.symbol.Length}");
+					MessageBox.Show($"Number of SPECIAL CHARACTERS is INVALID.\nENTER a valid integer between {minValue} and {maxValue}");
 					return;
 				}
 			}
@@ -182,11 +185,11 @@ namespace myPass
 			{
 				if (string.IsNullOrWhiteSpace(textBoxNumbers.Text))
 				{
-					textBoxNumbers.Text = r.Next(4, Math.Min(5, c.number.Length) + 1).ToString();
+					textBoxNumbers.Text = r.Next(4, Math.Min(maxValue, c.number.Length) + 1).ToString();
 				}
-				if (!int.TryParse(textBoxNumbers.Text, out numCase) || numCase <= 2 || numCase > c.number.Length)
+				if ((!int.TryParse(textBoxNumbers.Text, out numCase)) || numCase < minValue || numCase > maxValue)
 				{
-					MessageBox.Show($"Number of NUMBERS is INVALID.\nENTER a valid integer between 2 and {c.number.Length}");
+					MessageBox.Show($"Number of NUMBERS is INVALID.\nENTER a valid integer between {minValue} and {maxValue}");
 					return;
 				}
 			}
@@ -274,6 +277,36 @@ namespace myPass
 		private void saveBtn_MouseLeave(object sender, EventArgs e)
 		{
 			this.saveBtn.Image = Properties.Resources.Save_Btn;
+			this.Cursor = Cursors.Default;
+		}
+
+		private void resetBtn_Click(object sender, EventArgs e)
+		{
+			lowerCaseSwitch.Image = toggleOff;
+			textBoxLowerCase.Clear();
+			textBoxLowerCase.Hide();
+			upperCaseSwitch.Image = toggleOff;
+			textBoxUpperCase.Clear();
+			textBoxUpperCase.Hide();
+			symbolSwitch.Image = toggleOff;
+			textBoxSymbols.Clear();
+			textBoxSymbols.Hide();
+			numberSwitch.Image = toggleOff;
+			textBoxNumbers.Clear();
+			textBoxNumbers.Hide();
+			passwordLength.Text = string.Empty;
+			passwordLength.Hide();
+			textBoxGenerated.Text = string.Empty;
+		}
+		private void resetBtn_MouseHover(object sender, EventArgs e)
+		{
+			this.resetBtn.ForeColor = Color.FromArgb(214, 252, 40);
+			this.Cursor = Cursors.Hand;
+		}
+
+		private void resetBtn_MouseLeave(object sender, EventArgs e)
+		{
+			this.resetBtn.ForeColor = Color.White;
 			this.Cursor = Cursors.Default;
 		}
 

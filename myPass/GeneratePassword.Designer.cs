@@ -50,6 +50,7 @@
 			symbolSwitch = new PictureBox();
 			upperCaseSwitch = new PictureBox();
 			lowerCaseSwitch = new PictureBox();
+			resetBtn = new Button();
 			((System.ComponentModel.ISupportInitialize)saveBtn).BeginInit();
 			((System.ComponentModel.ISupportInitialize)generateBtn).BeginInit();
 			((System.ComponentModel.ISupportInitialize)copyBtn).BeginInit();
@@ -235,7 +236,7 @@
 			// 
 			// saveBtn
 			// 
-			saveBtn.Image = myPass.Properties.Resources.Save_Btn;
+			saveBtn.Image = Properties.Resources.Save_Btn;
 			saveBtn.Location = new Point(587, 562);
 			saveBtn.Margin = new Padding(4, 5, 4, 5);
 			saveBtn.Name = "saveBtn";
@@ -249,7 +250,7 @@
 			// 
 			// generateBtn
 			// 
-			generateBtn.Image = myPass.Properties.Resources.Generate_Btn;
+			generateBtn.Image = Properties.Resources.Generate_Btn;
 			generateBtn.Location = new Point(510, 334);
 			generateBtn.Margin = new Padding(4, 5, 4, 5);
 			generateBtn.Name = "generateBtn";
@@ -264,7 +265,7 @@
 			// copyBtn
 			// 
 			copyBtn.BackColor = Color.White;
-			copyBtn.Image = myPass.Properties.Resources.Copy;
+			copyBtn.Image = Properties.Resources.Copy;
 			copyBtn.Location = new Point(533, 575);
 			copyBtn.Margin = new Padding(4, 5, 4, 5);
 			copyBtn.Name = "copyBtn";
@@ -278,7 +279,7 @@
 			// 
 			// numberSwitch
 			// 
-			numberSwitch.Image = myPass.Properties.Resources.SwitchOff;
+			numberSwitch.Image = Properties.Resources.SwitchOff;
 			numberSwitch.Location = new Point(265, 396);
 			numberSwitch.Margin = new Padding(4, 5, 4, 5);
 			numberSwitch.Name = "numberSwitch";
@@ -290,7 +291,7 @@
 			// 
 			// symbolSwitch
 			// 
-			symbolSwitch.Image = myPass.Properties.Resources.SwitchOff;
+			symbolSwitch.Image = Properties.Resources.SwitchOff;
 			symbolSwitch.Location = new Point(265, 356);
 			symbolSwitch.Margin = new Padding(4, 5, 4, 5);
 			symbolSwitch.Name = "symbolSwitch";
@@ -302,7 +303,7 @@
 			// 
 			// upperCaseSwitch
 			// 
-			upperCaseSwitch.Image = myPass.Properties.Resources.SwitchOff;
+			upperCaseSwitch.Image = Properties.Resources.SwitchOff;
 			upperCaseSwitch.Location = new Point(265, 316);
 			upperCaseSwitch.Margin = new Padding(4, 5, 4, 5);
 			upperCaseSwitch.Name = "upperCaseSwitch";
@@ -314,7 +315,7 @@
 			// 
 			// lowerCaseSwitch
 			// 
-			lowerCaseSwitch.Image = myPass.Properties.Resources.SwitchOff;
+			lowerCaseSwitch.Image = Properties.Resources.SwitchOff;
 			lowerCaseSwitch.Location = new Point(265, 276);
 			lowerCaseSwitch.Margin = new Padding(4, 5, 4, 5);
 			lowerCaseSwitch.Name = "lowerCaseSwitch";
@@ -324,11 +325,30 @@
 			lowerCaseSwitch.TabStop = false;
 			lowerCaseSwitch.MouseClick += lowerCaseSwitch_MouseClick;
 			// 
+			// resetBtn
+			// 
+			resetBtn.BackColor = Color.FromArgb(24, 29, 22);
+			resetBtn.FlatAppearance.BorderSize = 0;
+			resetBtn.FlatStyle = FlatStyle.Flat;
+			resetBtn.Font = new Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+			resetBtn.ForeColor = Color.White;
+			resetBtn.Location = new Point(572, 87);
+			resetBtn.Margin = new Padding(4, 5, 4, 5);
+			resetBtn.Name = "resetBtn";
+			resetBtn.Size = new Size(93, 37);
+			resetBtn.TabIndex = 22;
+			resetBtn.Text = "RESET";
+			resetBtn.UseVisualStyleBackColor = false;
+			resetBtn.Click += resetBtn_Click;
+			resetBtn.MouseLeave += resetBtn_MouseLeave;
+			resetBtn.MouseHover += resetBtn_MouseHover;
+			// 
 			// GeneratePassword
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.FromArgb(138, 144, 102);
+			Controls.Add(resetBtn);
 			Controls.Add(saveBtn);
 			Controls.Add(generateBtn);
 			Controls.Add(copyBtn);
@@ -391,5 +411,6 @@
 		private System.Windows.Forms.PictureBox copyBtn;
 		private System.Windows.Forms.PictureBox generateBtn;
 		private System.Windows.Forms.PictureBox saveBtn;
+		private Button resetBtn;
 	}
 }
