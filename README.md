@@ -14,13 +14,13 @@ With almost all webpages requiring the creation of an account to access its cont
 I had already built a password generator, so I transformed it into password manager with the features listed below
 
 
-🚀 Features
-✨ Generate random password
-✨ Save password
-✨ Edit password
-✨ Update password
-✨ Easily filter you password by name of website
-✨ Save your details along with each password
+### 🚀 Features
+- ✨ Generate random password
+- ✨ Save password
+- ✨ Edit password
+- ✨ Update password
+- ✨ Easily filter you password by name of website
+- ✨ Save your details along with each password
 
 ---
 
