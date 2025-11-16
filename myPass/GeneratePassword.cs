@@ -196,10 +196,10 @@ namespace myPass
 
 			// Build ordered password
 			string oPassword = "";
-			for (int i = 0; i < llCase && i < c.lowerCase.Length; i++) oPassword += c.lowerCase[i];
-			for (int i = 0; i < ulCase && i < c.upperCase.Length; i++) oPassword += c.upperCase[i];
-			for (int i = 0; i < scCase && i < c.symbol.Length; i++) oPassword += c.symbol[i];
-			for (int i = 0; i < numCase && i < c.number.Length; i++) oPassword += c.number[i];
+			for (int i = 0; i < llCase; i++) oPassword += c.lowerCase[r.Next(c.lowerCase.Length)];
+			for (int i = 0; i < ulCase; i++) oPassword += c.upperCase[r.Next(c.upperCase.Length)];
+			for (int i = 0; i < scCase; i++) oPassword += c.symbol[r.Next(c.symbol.Length)];
+			for (int i = 0; i < numCase; i++) oPassword += c.number[r.Next(c.number.Length)];
 
 			if (oPassword.Length > 20)
 			{

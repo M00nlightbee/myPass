@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_57B9786E49DC4957AA32E189977884F9"
+        "MsmKey" = "8:_4ADA30323D144190B9761A6DA7A56F92"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -50,6 +50,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -319,7 +327,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_57B9786E49DC4957AA32E189977884F9"
+            "Target" = "8:_4ADA30323D144190B9761A6DA7A56F92"
             "Folder" = "8:_404DD3ABA41A45DCA518B55FB6F08FDC"
             "WorkingFolder" = "8:_2F5405EAB71C459FA932264D1594060B"
             "Icon" = "8:_A83A88BB1B914B5088C65447DC323A96"
@@ -333,7 +341,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_57B9786E49DC4957AA32E189977884F9"
+            "Target" = "8:_4ADA30323D144190B9761A6DA7A56F92"
             "Folder" = "8:_E5E86A7198814D56B8DCD8A3DCB38166"
             "WorkingFolder" = "8:_2F5405EAB71C459FA932264D1594060B"
             "Icon" = "8:_A83A88BB1B914B5088C65447DC323A96"
@@ -738,7 +746,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_57B9786E49DC4957AA32E189977884F9"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4ADA30323D144190B9761A6DA7A56F92"
             {
             "SourcePath" = "8:..\\myPass\\obj\\Release\\net8.0-windows\\apphost.exe"
             "TargetName" = "8:"
